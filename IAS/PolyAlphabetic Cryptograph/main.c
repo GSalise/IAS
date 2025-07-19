@@ -1,20 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 #include "helper.h"
 
 int main(){
 	char key[256];
 	char message[256];
-//	
-//	printf("Enter your key: ");
-//	scanf("%s", key);
-//	printf("\n%s - KEY", key);
 
 	printf("Enter your message: ");
-	scanf("%255s", message);
-	
-	printf("\nEnter your key: ");
-	scanf("%255s", key);
-	
+    fgets(message, sizeof(message), stdin);
+    message[strcspn(message, "\n")] = '\0';
+
+    printf("Enter your key: ");
+    fgets(key, sizeof(key), stdin);
+    key[strcspn(key, "\n")] = '\0';
+
+    removeSpaces(message);
+    removeSpaces(key);
+    
 	char *encryptedMessage = encrypt(message, key);
 	printf("\nEncrypted Message = %s", encryptedMessage);
 

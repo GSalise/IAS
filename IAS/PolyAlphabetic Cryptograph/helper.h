@@ -1,5 +1,5 @@
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef HELPER_H
+#define HELPER_H
 
 void setMatrix(char m[26][26]);
 void removeSpaces(char text[]);

@@ -30,7 +30,7 @@ void removeSpaces(char text[]){
 		i++;
 	}	
 	
-	text[j] = '/0';
+	text[j] = '\0';
 }
 
 void setUppercase(char message[], char key[]){
@@ -83,9 +83,6 @@ char *decrypt(char encryptedMessage[], char key[]){
 		}
 	}
 	
-	
-	
-	
 	decryptedMessage[messageLength] = '\0';
 	
 	return decryptedMessage;
@@ -102,6 +99,7 @@ int findIndex(char target){
 		}
 	}
 }
+
 
 
 
